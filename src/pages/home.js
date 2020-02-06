@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import axios from "axios";
+// import axios from "axios";
 import Scream from "../component/Scream";
 import Profile from "../component/Profile";
 import PropTypes from "prop-types";

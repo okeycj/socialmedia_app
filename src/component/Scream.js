@@ -6,6 +6,7 @@ import relativeTime from "dayjs/plugin/relativeTime";
 import PropTypes from "prop-types";
 import MyButton from "../util/MyBotton";
 import DeleteScream from "./DeleteScream";
+import ScreamDialog from "./ScreamDialog";
 // MUI Stuff
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
@@ -67,10 +68,7 @@ class Scream extends Component {
 				likeCount,
 				commentCount
 			},
-			user: {
-				authenticated,
-				credientials
-			}
+			user: { authenticated, credientials }
 		} = this.props;
 		const likeButton = !authenticated ? (
 			<MyButton tip="like">
@@ -118,6 +116,7 @@ class Scream extends Component {
 						<ChatIcon color="primary" />
 					</MyButton>
 					<span>{commentCount} comments</span>
+					<ScreamDialog screamId={_id} userHandle={userHandle} />
 				</CardContent>
 			</Card>
 		);
