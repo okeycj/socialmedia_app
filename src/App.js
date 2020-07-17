@@ -11,11 +11,12 @@ import store from "./redux/store";
 import { SET_AUTHENTICATED, SET_UNAUTHENTICATED } from "./redux/types";
 import { logoutUser, getUserData } from "./redux/actions/userActions";
 // component
-import Navbar from "./component/Navbar";
+import Navbar from "./component/layout/Navbar";
 // Page
 import home from "./pages/home";
 import login from "./pages/login";
 import signup from "./pages/signup";
+import user from "./pages/user.js";
 import axios from "axios";
 
 const theme = createMuiTheme({
@@ -36,6 +37,14 @@ const theme = createMuiTheme({
 	others: {
 		typography: {
 			useNextVariants: true
+		},
+		invisibleSeparator: {
+			border: "none",
+			margin: 4
+		},
+		visibleSeparator: {
+			width: "100%",
+			borderBottom: "1px solid rgba(0,0,0,0.1)"
 		}
 	}
 });
@@ -61,6 +70,7 @@ class App extends Component {
 								<Route exact path="/" component={home} />
 								<AuthRoute exact path="/login" component={login} />
 								<AuthRoute exact path="/signup" component={signup} />
+								<Route exact path="/user/:handle" component={user} />
 							</Switch>
 						</div>
 					</Router>

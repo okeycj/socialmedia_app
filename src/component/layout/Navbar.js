@@ -2,14 +2,13 @@ import React, { Component, Fragment } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import PropsTypes from "prop-types";
-import MyButton from "../util/MyBotton";
-import PostScream from "../component/PostScream";
+import MyButton from "../../util/MyBotton";
+import PostScream from "../scream/PostScream";
 // MUI stuff
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Button from "@material-ui/core/Button";
 // Icons
-import AddIcon from "@material-ui/icons/Add";
 import HomeIcon from "@material-ui/icons/Home";
 import Notifications from "@material-ui/icons/Notifications";
 
@@ -22,9 +21,6 @@ class Navbar extends Component {
 					{authenticated ? (
 						<Fragment>
 							<PostScream />
-							{/* <MyButton tip="Post a Scream!">
-								<AddIcon />
-							</MyButton> */}
 							<Link to="/">
 								<MyButton tip="Home">
 									<HomeIcon />

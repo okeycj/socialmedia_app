@@ -1,10 +1,10 @@
 import React, { Component, Fragment } from "react";
 import PropTypes from "prop-types";
 import withStyles from "@material-ui/core/styles/withStyles";
-import MyBotton from "../util/MyBotton";
+import MyBotton from "../../util/MyBotton";
 // redux
 import { connect } from "react-redux";
-import { postScream, clearErrors } from "../redux/actions/dataActions";
+import { postScream, clearErrors } from "../../redux/actions/dataActions";
 // MUI stuff
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
